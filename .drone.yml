@@ -7,4 +7,5 @@ steps:
     image: python:3-slim
     pull: if-not-exists
     commands:
+      - pip install -r requirements.txt
       - pytest
