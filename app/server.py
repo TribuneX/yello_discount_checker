@@ -3,8 +3,8 @@ from app.discount_scraper import get_discount
 import json
 
 
-@route('/price/<plz>')
-def price(plz):
+@route('/discount/<plz>')
+def discount(plz):
     discount = get_discount(plz)
     return json.dumps({'plz': plz, 'discount' : int(discount)})
 
