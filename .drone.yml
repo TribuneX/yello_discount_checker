@@ -1,0 +1,10 @@
+---
+kind: pipeline
+name: testing
+
+steps:
+  - name: test
+    image: python:3-slim
+    pull: if-not-exists
+    commands:
+      - pytest
